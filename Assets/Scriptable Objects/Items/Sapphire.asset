@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c7a4df41d4d49e4a8f9b78f85c0321, type: 3}
+  m_Name: Sapphire
+  m_EditorClassIdentifier: 
+  itemSprite: {fileID: -727452600, guid: 840d7eb28d2d045ce8185b6228b68f9f, type: 3}
+  itemName: sapphire
+  itemDescription: Du hast einen Saphir enthalten!
+  isKey: 0
+  isCoin: 0
+  isArrow: 0

@@ -1,0 +1,205 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public enum PlayerState
+{
+    walk,
+    attack,
+    interact,
+    stagger,
+    idle
+}
+
+public class PlayerMovement : MonoBehaviour
+{
+    public PlayerState currentState;
+    public float speed;
+    private Rigidbody2D myRigidbody;
+    private Vector3 change;
+    private Animator animator;
+    public FloatValue currentHealth;
+    public VectorValue startingPosition;
+    public SignalSender playerHealthSignal;
+    public SignalSender playerHit;
+    public SignalSender powerUpSignal;
+    public SignalSender powerUpSignal2;
+    public Inventory playerInventory;
+    public SpriteRenderer receivedItemSprite;
+    
+    [Header("Audio")]
+    public AudioClip swing;
+    public new AudioSource audio;
+
+    [Header("Sword Stuff")]
+    public Item sword;
+
+    [Header("Projectile Stuff")]
+    public GameObject projectile;
+    public Item bow;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        powerUpSignal.Raise();
+        powerUpSignal2.Raise();
+        audio = GetComponent<AudioSource>();
+        currentState = PlayerState.walk;
+        animator = GetComponent<Animator>();
+        myRigidbody = GetComponent<Rigidbody2D>();
+        animator.SetFloat("moveX", 0);
+        animator.SetFloat("moveY", -1);
+        transform.position = startingPosition.initialValue;
+    }
+
+    void FixedUpdate() //without "Fixed" if change.x, change.y and if-statement is added
+    {
+        if(currentState == PlayerState.interact) //is the player in an interaction
+        {
+            return;
+        }
+        change = Vector3.zero;
+        change.x = Input.GetAxisRaw("Horizontal"); //* Time.deltaTime * speed;
+        change.y = Input.GetAxisRaw("Vertical"); //* Time.deltaTime * speed;
+        /*if (change != Vector3.zero)
+        {
+            transform.Translate(new Vector3(change.x, change.y));
+        }*/
+        if (currentState == PlayerState.walk || currentState == PlayerState.idle)
+        {
+            UpdateAnimationAndMove();
+        }
+    }
+
+    // Update is called once per frame
+    void Update() 
+    {
+        if(Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        {   
+            if(playerInventory.CheckForItem(sword))
+            {
+                StartCoroutine(AttackCo());
+            }
+        }
+        if (Input.GetButtonDown("SecondAttack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        {
+            if (playerInventory.CheckForItem(bow))
+            { 
+                if(playerInventory.amountOfArrows > 0)
+                {
+                    StartCoroutine(SecondAttackCo());
+                }
+            }
+        }
+    }
+
+    private IEnumerator AttackCo()
+    {
+        audio.clip = swing;
+        audio.Play();
+        animator.SetBool("attacking", true);
+        currentState = PlayerState.attack;
+        yield return null;
+        animator.SetBool("attacking", false);
+        yield return new WaitForSeconds(.3f);
+        if(currentState != PlayerState.interact)
+        {
+            currentState = PlayerState.walk;
+        }
+    }
+
+    private IEnumerator SecondAttackCo()
+    {
+        currentState = PlayerState.attack;
+        yield return null;
+        MakeArrow();
+        yield return new WaitForSeconds(.3f);
+        if (currentState != PlayerState.interact)
+        {
+            currentState = PlayerState.walk;
+        }
+    }
+
+    private void MakeArrow()
+    {
+        Vector2 tmp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        Arrow arrow = Instantiate(projectile,transform.position, Quaternion.identity).GetComponent<Arrow>();
+        arrow.Setup(tmp, ChooseArrowDirection());
+        playerInventory.amountOfArrows -= 1;
+        powerUpSignal.Raise();
+    }
+
+    Vector3 ChooseArrowDirection()
+    {
+        float temp = Mathf.Atan2(animator.GetFloat("moveY"), animator.GetFloat("moveX")) * Mathf.Rad2Deg;
+        return new Vector3(0, 0, temp);
+    }
+
+    public void RaiseItem()
+    {
+        if(playerInventory.currentItem != null)
+        {
+            if(currentState != PlayerState.interact)
+            {
+                animator.SetBool("receiveItem", true);
+                currentState = PlayerState.interact;
+                receivedItemSprite.sprite = playerInventory.currentItem.itemSprite;
+            }
+            else 
+            {
+                animator.SetBool("receiveItem", false);
+                currentState = PlayerState.idle;
+                receivedItemSprite.sprite = null;
+                playerInventory.currentItem = null;
+            }
+        }
+    }
+
+    void UpdateAnimationAndMove()
+    {
+        if(change != Vector3.zero)
+        {
+            MoveCharacter();
+            animator.SetFloat("moveX", change.x);
+            animator.SetFloat("moveY", change.y);
+            animator.SetBool("moving", true);
+        } 
+        else 
+        {
+            animator.SetBool("moving", false);
+        } 
+    }
+
+    void MoveCharacter()
+    {
+        myRigidbody.MovePosition(transform.position + change.normalized * speed * Time.deltaTime);
+    }
+
+    public void Knock(float knockTime, float damage)
+    {
+        currentHealth.RuntimeValue -= damage;
+        playerHealthSignal.Raise();
+        if(currentHealth.RuntimeValue > 0)
+        {
+            StartCoroutine(KnockCo(knockTime));
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator KnockCo(float knockTime)
+    {
+        playerHit.Raise();
+        if(myRigidbody != null)
+        {
+            yield return new WaitForSeconds(knockTime);
+            myRigidbody.velocity = Vector2.zero;
+            currentState = PlayerState.idle;
+            myRigidbody.velocity = Vector2.zero;            
+        }
+    }
+}

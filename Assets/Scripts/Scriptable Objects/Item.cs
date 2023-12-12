@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu]
+public class Item : ScriptableObject
+{
+    public Sprite itemSprite;
+    public string itemName;
+    public string itemDescription;
+    public bool isKey;
+    public bool isDungeonKey;
+    public bool isCoin;
+    public bool isArrow;
+}

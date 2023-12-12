@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f16ce6258d0b4727b4aec259695bf27, type: 3}
+  m_Name: PlayerInventory
+  m_EditorClassIdentifier: 
+  currentItem: {fileID: 0}
+  items:
+  - {fileID: 11400000, guid: 1c4ccea58adbfb2498737e7427d81e0b, type: 2}
+  - {fileID: 11400000, guid: d9edf4e5f13404745b69ffc3e4e94a60, type: 2}
+  - {fileID: 11400000, guid: 23a4dbda102e24759a738c12c7f5db93, type: 2}
+  amountOfCoins: 35
+  amountOfArrows: 190
+  keyInInventory: 0
+  dungeonKeyInInventory: 0
+  foundEmerald: 0
+  foundRuby: 0
+  foundSaphire: 0
+  foundDiamond: 0
+  powerUpSignal: {fileID: 11400000, guid: 0954f3730e8f94b1eabb03e954b4aff5, type: 2}
+  powerUpSignal2: {fileID: 11400000, guid: 78aec2ca9119d49a1bad6cad65ad2511, type: 2}

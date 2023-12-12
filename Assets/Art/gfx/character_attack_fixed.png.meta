@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: c21ba42cc09e2504992bbba715a00a51
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: i hope last attack_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 196
+        width: 38
+        height: 32
+      alignment: 9
+      pivot: {x: 0.6402418, y: 0.43647718}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f663282c5e611468b06c812143917a
+      internalID: -1583656627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 191
+        width: 30
+        height: 42
+      alignment: 9
+      pivot: {x: 0.506442, y: 0.4776477}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04436ecee1177c84c8d36c124ab80999
+      internalID: 1104803686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 191
+        width: 28
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5392222, y: 0.51415557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3198fe365006714fa36601b7796526c
+      internalID: 277173381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 190
+        width: 30
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5039271, y: 0.49270767}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48250316e6c869b4ab437f1f6f366f20
+      internalID: -1989961858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 148
+        width: 21
+        height: 21
+      alignment: 9
+      pivot: {x: 0.3739435, y: 0.47163826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da18c773375cb274c8d3f14d59d672c3
+      internalID: -1944750349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_5
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 148
+        width: 26
+        height: 25
+      alignment: 9
+      pivot: {x: 0.38439268, y: 0.35564575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a53719e1627ac14fb2d7e645c0a88d6
+      internalID: -218428554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 148
+        width: 15
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5310293, y: 0.40691528}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01949082beb05334082fad03a3bec0be
+      internalID: -1755545271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_7
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 149
+        width: 15
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5310293, y: 0.40070924}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00323da15d7352f4fb93603f156f1e25
+      internalID: -992072121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 90
+        width: 23
+        height: 28
+      alignment: 9
+      pivot: {x: 0.431738, y: 0.613321}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c29190212985c54e8058bf285cac28e
+      internalID: -1609108974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_9
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 95
+        width: 25
+        height: 23
+      alignment: 9
+      pivot: {x: 0.3221051, y: 0.5272817}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8460f0836a0641468743a53a96e0427
+      internalID: 776867829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_10
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 95
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.4060322, y: 0.469169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723721426529c1847aecf16a1bd489eb
+      internalID: -206939353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_11
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 95
+        width: 20
+        height: 24
+      alignment: 9
+      pivot: {x: 0.4029602, y: 0.50898486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115128fd1c57aa3408cdb8da56ef9062
+      internalID: 447670297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_12
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 38
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5086072, y: 0.48722333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6da00353a617c409bc2aac0bc249a2
+      internalID: -1570999141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_13
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 37
+        width: 34
+        height: 39
+      alignment: 9
+      pivot: {x: 0.61097133, y: 0.43339783}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade612b0b9ca8e84f9ebb78bcd25802e
+      internalID: 1025751614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_14
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 37
+        width: 34
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5049847, y: 0.44830528}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5e3d4b4e24f1045ab9da73af65fa25
+      internalID: -79323044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: i hope last attack_15
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 37
+        width: 32
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5396972, y: 0.43626106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c813a7acffaa044788df22a7fe26ece
+      internalID: -65596879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      i hope last attack_0: -1583656627
+      i hope last attack_1: 1104803686
+      i hope last attack_10: -206939353
+      i hope last attack_11: 447670297
+      i hope last attack_12: -1570999141
+      i hope last attack_13: 1025751614
+      i hope last attack_14: -79323044
+      i hope last attack_15: -65596879
+      i hope last attack_2: 277173381
+      i hope last attack_3: -1989961858
+      i hope last attack_4: -1944750349
+      i hope last attack_5: -218428554
+      i hope last attack_6: -1755545271
+      i hope last attack_7: -992072121
+      i hope last attack_8: -1609108974
+      i hope last attack_9: 776867829
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
